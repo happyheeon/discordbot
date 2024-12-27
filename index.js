@@ -5,7 +5,8 @@ const {
   Routes,
   SlashCommandBuilder,
 } = require("discord.js");
-const { token, clientId } = require("./config.json");
+const token = process.env.TOKEN;
+const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 
 const client = new Client({
@@ -198,7 +199,7 @@ client.on("interactionCreate", async (interaction) => {
     } catch (error) {
       console.error(error);
       await interaction.reply({
-        content: "유저를 격리하는 도중 오류가 발생했습니다.",
+        content: "유저를 격리하는 도중 오류가 발생했습니���.",
         ephemeral: true,
       });
     }
@@ -313,7 +314,7 @@ client.on("interactionCreate", async (interaction) => {
     try {
       let dmMessage = `${interaction.guild.name} 서버에서 경고 ${warningCount}회를 받았습니다.\n현재 경고 횟수: ${newWarningCount}회\n사유: ${reason}`;
       if (newWarningCount >= 5) {
-        dmMessage += "\n\n⚠️ 경고 5회 누적으로 차단되었습니다.";
+        dmMessage += "\n\n⚠️ 경고 5회 ��적으로 차단되었습니다.";
       }
       await targetUser.send(dmMessage);
     } catch (error) {
