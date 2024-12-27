@@ -1,0 +1,19 @@
+{
+  "1163360780599693373": {
+    "count": 3,
+    "history": [
+      {
+        "count": 1,
+        "reason": "테스트",
+        "warnedBy": "gremfox",
+        "timestamp": "2024-12-25T06:33:09.002Z"
+      },
+      {
+        "count": 2,
+        "reason": "테스트",
+        "warnedBy": "gremfox",
+        "timestamp": "2024-12-25T06:33:24.021Z"
+      }
+    ]
+  }
+}
